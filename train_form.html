@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indian Railways - Book Ticket</title>
+    <style>
+        body { font-family: Arial; background-color: #eef2f3; }
+        .form-container {
+            background: white; padding: 20px; max-width: 400px; margin: auto;
+            margin-top: 50px; border-radius: 10px; box-shadow: 0px 0px 10px #ccc;
+        }
+        h2 { text-align: center; color: #333; }
+        label { display: block; margin-top: 10px; font-weight: bold; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; }
+        button { margin-top: 15px; padding: 10px; background: green; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background: darkgreen; }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Book Your Train Ticket</h2>
+        <form action="/cgi-bin/railway.cgi" method="GET">
+            <label>Passenger Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Age:</label>
+            <input type="number" name="age" required>
+
+            <label>Gender:</label>
+            <select name="gender" required>
+                <option value="">Select</option>
+                <option value="M">Male</option>
+                <option value="F">Female</option>
+            </select>
+
+            <label>Select Train:</label>
+            <select name="train" required>
+                <option value="101">Rajdhani Express (Delhi → Mumbai) - Rs.1500</option>
+                <option value="102">Shatabdi Express (Delhi → Kolkata) - Rs.2000</option>
+                <option value="103">Duronto Express (Delhi → Chennai) - Rs.2500</option>
+            </select>
+
+            <label>Number of Seats:</label>
+            <input type="number" name="seats" required>
+
+            <button type="submit">Book Ticket</button>
+        </form>
+    </div>
+</body>
+</html>
